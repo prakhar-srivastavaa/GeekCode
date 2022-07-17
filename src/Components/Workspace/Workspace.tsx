@@ -8,6 +8,7 @@ type WorkspaceProps = {
     problem : Problem
 };
 
+
 const Workspace:React.FC<WorkspaceProps> = (problem) => {
     
     return (
