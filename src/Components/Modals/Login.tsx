@@ -12,7 +12,8 @@ type LoginProps = {
 const Login: React.FC<LoginProps> = () => {
     const setAuthModalState = useSetRecoilState(authModalState);
     const handleClick = (type:"login" | "register" | "forgotPassword") => {
-        setAuthModalState((prev) => ({ ...prev, type}))
+        // Pass the email to forgot password page
+        setAuthModalState((prev) => ({ ...prev, type, email: type === "forgotPassword" ? inputs.email : prev.email }))
     };
     const [inputs, setInputs] = useState({email:"",password:""});
 
