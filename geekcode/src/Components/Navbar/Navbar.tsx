@@ -1,3 +1,4 @@
+// Navbar component for GeekCode application. Displays logo and Sign In button.
 import Link from 'next/link';
 import React from 'react';
 type NavbarProps = {
