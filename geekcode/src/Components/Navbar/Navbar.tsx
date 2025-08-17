@@ -16,7 +16,6 @@ const Navbar:React.FC<NavbarProps> = () => {
                 Sign In
             </button>
         </div>
-        
     </div>
 }
 export default Navbar;
