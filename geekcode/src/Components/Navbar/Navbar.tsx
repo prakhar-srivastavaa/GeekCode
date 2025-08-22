@@ -5,19 +5,36 @@ type NavbarProps = {
 };
 
 const Navbar:React.FC<NavbarProps> = () => {
-    return <div className='flex items-center justify-between sm:px-12 px-2 md:px-8 h-24'>
-        <Link href="/" className='flex items-center h-full'>
-            <img src="/logo-full.png" alt="GeekCode" className='h-16 mr-2 sm:mr-4'   />
-        </Link>
-        <div className="flex items-center">
-            {/* green Sign In button and need black grey effect in button from all corner and side of rectangle of the button when mouse is over the button and when clicked a modern happy effect in bakcground with glittering effect */}
-            <button className='bg-black bg-brand-orange-fallback text-white px-2 py-1 sm:px-4 rounded-md text-sm font-24
-                hover:text-brand-orange hover:bg-white hover:border-2 hover:border-brand-orange '>
-                <Link href="/login">Sign In</Link>
-            </button>
-        </div>
+    return <>
+    <div className="navbar bg-base-100 shadow-">
+  <div className="navbar-start">
+    <div className="dropdown">
+      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul
+        tabIndex={0}
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li><a>Item 1</a></li>
+        <li>
+          <a>Parent</a>
+          <ul className="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </li>
+        <li><a>Item 3</a></li>
+      </ul>
     </div>
+    <a className="btn btn-ghost text-xl">daisyUI</a>
+  </div>
+  <div className="navbar-center hidden lg:flex">
+  </div>
+  <div className="navbar-end">
+    <a className="btn">Button</a>
+  </div>
+</div>
+    </>
 }
-
 
 export default Navbar;
