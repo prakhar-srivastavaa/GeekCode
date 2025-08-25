@@ -5,7 +5,8 @@ type NavbarProps = {
 };
 
 const Navbar:React.FC<NavbarProps> = () => {
-    return <>
+    return (
+    <>
     <div className="navbar shadow- display-none m-auto h-[50px] w-full items-center justify-center px-6 md:flex bg-base-200">
 
 
@@ -21,6 +22,7 @@ const Navbar:React.FC<NavbarProps> = () => {
   </div>
 </div>
     </>
+    );
 }
 
 export default Navbar;
