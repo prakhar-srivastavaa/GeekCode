@@ -9,7 +9,7 @@ const Login: React.FC<LoginProps> = () => {
     return (
         <form className='space-y-6 px-6 pb-4'>
             <h3 className='text-xl font-medium text-white'>
-                Sign in to GeekCode
+                Sign in to GeekCode {"</>"}
             </h3>
             <div>
                 <label htmlFor="email" className='text-sm font-medium block mb-2 text-gray-300'>
@@ -43,7 +43,7 @@ const Login: React.FC<LoginProps> = () => {
                 </a>
             </button>
             <div className='text-sm font-medium text-gray-300'>
-                Not registered?
+                Not registered?{" "}
                 <a></a>
                 <a href='#' className=' text-green-700 hover:underline w-full'>
                     Create account
