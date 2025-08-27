@@ -16,7 +16,7 @@ const Navbar: React.FC<NavbarProps> = () => {
         {/* add herif link/auth-login when clicked button signin*/}
         <div className="navbar-end">
           <Link href="/auth-login">
-          <button className="btn btn-sm btn-ghost bg-green-800 hover:bg-green-700 text-white">Sign in</button>
+          <button className="btn btn-sm btn-ghost bg-green-800 hover:bg-green-700 text-white transition duration-300 ease-in-out">Sign in</button>
 </Link>
           {/* <a className="btn btn-sm btn-ghost bg-green-800 hover:bg-green-700 text-white">Sign in</a> */}
         </div>
