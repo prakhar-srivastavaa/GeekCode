@@ -1,24 +1,27 @@
+import { authModalState } from '@/atoms/authModalAtom';
 import Link from 'next/link';
 import React from 'react';
+import { useSetRecoilState } from 'recoil';
 type NavbarProps = {
 
 };
 
 const Navbar: React.FC<NavbarProps> = () => {
+  const setAuthModalState =useSetRecoilState(authModalState)
+  const handleClick = () => {
+    setAuthModalState((prev) => ({...prev, isOpen: true, type: "login"}))
+  }
   return (
     <>
-      <div className="navbar shadow- display-none m-auto h-[50px] w-full items-center justify-center px-6 md:flex bg-base-200">
-        <div className="navbar-start">
-          <Link href="/home"><img src="/logo-full.png" alt="Logo" className="h-16 w-32" /></Link>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-        </div>
-        {/* add herif link/auth-login when clicked button signin*/}
-        <div className="navbar-end">
-          <Link href="/auth-login">
-          <button className="btn btn-sm btn-ghost bg-green-800 hover:bg-green-700 text-white transition duration-300 ease-in-out">Sign in</button>
-</Link>
-          {/* <a className="btn btn-sm btn-ghost bg-green-800 hover:bg-green-700 text-white">Sign in</a> */}
+      <div className="flex items-center justify-between sm:px-12 px-2 md:px-24">
+          <Link href="/" className='flex items-center justify-center h-20'>
+            <img src="/logo-full.png" alt="Geekcode" className="h-full" />
+          </Link>
+        <div className="flex items-center">
+          <button className="btn btn-sm btn-ghost bg-green-800 hover:bg-green-700 text-white transition duration-300 ease-in-out
+          " onClick={handleClick}>
+            Sign in
+          </button>
         </div>
       </div>
     </>

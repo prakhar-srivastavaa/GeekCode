@@ -18,7 +18,8 @@ const AuthPage:React.FC<AuthPageProps> = () => {
             <div className='flex item conter justify-center pointer-events-none select-none'>
                 <img src={"/hero.png"} alt="Hero Image" className='w-1/2 h-1/2 mt-10'/>
             </div>
-            (authModal.isOpen && <AuthModal />)
+            
+            {authModal.isOpen && <AuthModal />}
         </div>
     </div>;
 };
