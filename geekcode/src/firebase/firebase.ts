@@ -1,25 +1,17 @@
 // Import the functions you need from the SDKs you need
-import { getApp, getApps, initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAoWFt5EWn499Y9jVcySPmFDiabhi29CVI",
-  authDomain: "geekcode-1.firebaseapp.com",
-  projectId: "geekcode-1",
-  storageBucket: "geekcode-1.firebasestorage.app",
-  messagingSenderId: "530329718104",
-  appId: "1:530329718104:web:82fe35574a470b32cee92d"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
-const app = !getApps.length ? initializeApp(firebaseConfig): getApp();
-
-const auth =getAuth(app);
-const firestore = getFirestore(app);
-
-export {auth, firestore,app }
+const app = initializeApp(firebaseConfig);
