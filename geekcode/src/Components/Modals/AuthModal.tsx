@@ -22,12 +22,11 @@ const AuthModal: React.FC<AuthModalProps> = () => {
                     <div className='bg-white rounded-lg shadow relative w-full bg-gradient-to-b from-brand-orange rounded-lg s to-slate-900 mx-6'>
                         <div className='flex justify-end p-2'>
                             <button
-								type='button'
-								className='bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-800 hover:text-white text-white'
-								onClick={closeModal}
-							>
-								<IoClose className='h-5 w-5' />
-							</button>
+                                type='button'
+                                className='bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-black/25 hover:text-white text-white transition-colors duration-200'
+                                onClick={closeModal}>
+                                <IoClose className='h-5 w-5'/>
+                            </button>
                         </div>
 {                        authModal.type === "login" ? <Login />:  authModal.type === "register" ? <Signup /> :<ResetPassword />}
                     </div>
