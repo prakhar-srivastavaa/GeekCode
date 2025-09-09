@@ -4,6 +4,8 @@ import Link from 'next/link';
 import React from 'react';
 import { AiFillYoutube } from 'react-icons/ai';
 import { BsCheckCircle } from 'react-icons/bs';
+import { IoClose } from 'react-icons/io5';
+import YouTube from 'react-youtube';
 
 type ProblemsTableProps = {
 
@@ -41,7 +43,8 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
                 <div className='w-full z-50 h-full px-6 relative max-w-4xl:'>
                     <div className='w-full h-full flex items-center justify-center relative'>
                         <div className='w-full relative'>
-                            <
+                            <IoClose fontSize={35} className='cursor-pointer absolute -top-16 right-0 '/>
+                            <YouTube videoId={'xty7fr-k0TU'} loading='lazy' iframeClassName='w-full min-h-[500px]'/>
                         </div>
                     </div>
                 </div>
