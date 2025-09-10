@@ -1,7 +1,7 @@
 import { problems } from '@/mockProblems/problems';
 import { doc } from 'firebase/firestore';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { AiFillYoutube } from 'react-icons/ai';
 import { BsCheckCircle } from 'react-icons/bs';
 import { IoClose } from 'react-icons/io5';
@@ -12,6 +12,10 @@ type ProblemsTableProps = {
 };
 
 const ProblemsTable: React.FC<ProblemsTableProps> = () => {
+    const [youtubePlayer, setYoutubePlayer] = useState({
+        isOpen: false,
+        videoId: "",
+    })
     return (
         <>
             <tbody className='text-white'>
@@ -38,17 +42,19 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
                     );
                 })}
             </tbody>
+            {youtubePlayer.isOpen && (
             <tfoot className='fixed top-0 left-0 h-screen flex items-center justify-center'>
-                <div className='bg-black z-10 opacity-70 top-0 left-0 w-screen h-screen absolute'></div>
-                <div className='w-full z-50 h-full px-6 relative max-w-4xl:'>
-                    <div className='w-full h-full flex items-center justify-center relative'>
-                        <div className='w-full relative'>
-                            <IoClose fontSize={35} className='cursor-pointer absolute -top-16 right-0 '/>
+                <div className='bg-black z-10 opacity-80 top-0 left-0 w-screen h-screen absolute'></div>
+                <div className='w-full z-50 h-full px-6 relative max-w-4xl'>
+                    <div className='w-screen h-full flex items-center justify-center relative'>
+                        <div className='w-full relative max-w-4xl mx-auto'>
+                            <IoClose fontSize={"35"} className='cursor-pointer absolute -top-16 right-0'/>
                             <YouTube videoId={'xty7fr-k0TU'} loading='lazy' iframeClassName='w-full min-h-[500px]'/>
                         </div>
                     </div>
                 </div>
             </tfoot>
+            )}
         </>
 
     );
