@@ -3,7 +3,6 @@ import React from 'react';
 import { useSignOut } from 'react-firebase-hooks/auth';
 import { FiLogOut } from 'react-icons/fi';
 
-
 const Logout:React.FC = () => {
     const [signOut, loading, error] = useSignOut(auth);
     const handleLogout = () => {
@@ -16,6 +15,5 @@ const Logout:React.FC = () => {
     </button>
     </>
 
-    
 }
 export default Logout;
