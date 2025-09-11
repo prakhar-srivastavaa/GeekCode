@@ -1,7 +1,7 @@
 import { problems } from '@/mockProblems/problems';
 import { doc } from 'firebase/firestore';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AiFillYoutube } from 'react-icons/ai';
 import { BsCheckCircle } from 'react-icons/bs';
 import { IoClose } from 'react-icons/io5';
@@ -15,7 +15,21 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
     const [youtubePlayer, setYoutubePlayer] = useState({
         isOpen: false,
         videoId: "",
-    })
+    });
+
+    const closeModal = () => {
+        setYoutubePlayer({ isOpen: false, videoId: "" });
+    };
+
+    useEffect(() => {
+        const handleEsc = (e: KeyboardEvent) => {
+            if (e.key === "Escape")  closeModal();
+        };
+        window.addEventListener('keydown', handleEsc)
+        return () => window.removeEventListener('keydown', handleEsc)
+    
+    },[]);
+
     return (
         <>
             <tbody className='text-white'>
@@ -34,7 +48,9 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
                             <td className={`px-6 py-4 ${difficultyColor}`}>{doc.difficulty}</td>
                             <td className='px-6 py-4'>{doc.category}</td>
                             <td className='px-6 py-4'>
-                                {doc.videoId ? (<AiFillYoutube fontSize={28} className='cursor-pointer hover:text-red-600' />) : (
+                                {doc.videoId ? (<AiFillYoutube fontSize={28} className='cursor-pointer hover:text-red-600'
+                                    onClick={() => setYoutubePlayer({ isOpen: true, videoId: doc.videoId as string })}
+                                />) : (
                                     <p className='text-gray-400'>Coming soon</p>
                                 )}
                             </td>
@@ -44,12 +60,15 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
             </tbody>
             {youtubePlayer.isOpen && (
             <tfoot className='fixed top-0 left-0 h-screen flex items-center justify-center'>
-                <div className='bg-black z-10 opacity-80 top-0 left-0 w-screen h-screen absolute'></div>
-                <div className='w-full z-50 h-full px-6 relative max-w-4xl'>
+                <div className='bg-black z-10 opacity-80 top-0 left-0 w-screen h-screen absolute'
+                    ></div>
+                <div className='w-full z-50 h-full relative max-w-4xl'onClick={closeModal}>
                     <div className='w-screen h-full flex items-center justify-center relative'>
-                        <div className='w-full relative max-w-4xl mx-auto'>
-                            <IoClose fontSize={"35"} className='cursor-pointer absolute -top-16 right-0'/>
-                            <YouTube videoId={'xty7fr-k0TU'} loading='lazy' iframeClassName='w-full min-h-[500px]'/>
+                        <div className='w-full relative max-w-4xl '>
+                            <IoClose fontSize={"35"} className='cursor-pointer absolute -top-16 right-0'
+                                onClick={closeModal}
+                            />
+                            <YouTube videoId={youtubePlayer.videoId} loading='lazy' iframeClassName='w-full min-h-[500px]'/>
                         </div>
                     </div>
                 </div>
