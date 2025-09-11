@@ -49,7 +49,7 @@ const Login: React.FC<LoginProps> = () => {
                 type="email"
                     name="email"
                     id="email"
-                    className='border-2 outline-none sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-white border-gray-500 placeholder-gray-400 text-white'
+                    className='border-2 outline-none sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-white border-gray-500 placeholder-gray-400 text-black'
                     placeholder='name@company.com'
                 />
             </div>
