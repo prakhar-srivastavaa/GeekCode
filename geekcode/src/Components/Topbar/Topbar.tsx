@@ -1,11 +1,14 @@
+import { auth } from '@/firebase/firebase';
 import Link from 'next/link';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 type TopbarProps = {
     
 };
 
 const Topbar:React.FC<TopbarProps> = () => {
+    const [user] = useAuthState(auth);
     
     return <div>
         <nav className='relative flex h-[50px] w-full shrink-0 items-center px-5 bg-dark-layer-1 text-dark-gray-7'>
@@ -25,11 +28,13 @@ const Topbar:React.FC<TopbarProps> = () => {
                             Premium
                         </a>
                     </div>
-                    <Link href="/auth">
-                        <button className="btn btn-sm btn-ghost bg-green-800 hover:bg-green-700 text-white transition duration-300 ease-in-out">
-                            Sign in
-                        </button>
-                    </Link>
+                        {!user &&(
+                            <Link href="/auth">
+                                <button className="btn btn-sm btn-ghost bg-green-800 hover:bg-green-700 text-white transition duration-300 ease-in-out">
+                                    Sign in
+                                </button>
+                            </Link>
+                        )}
                 </div>
             </div>
         </nav>
