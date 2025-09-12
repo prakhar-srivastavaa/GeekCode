@@ -1,10 +1,8 @@
 import { auth } from '@/firebase/firebase';
 import React, { useEffect, useState } from 'react';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
-
-type ResetPasswordProps = {
-
-};
+import { toast } from 'react-toastify';
+type ResetPasswordProps = {};
 
 const ResetPassword: React.FC<ResetPasswordProps> = () => {
     const [email, setEmail] = useState('');
@@ -13,12 +11,13 @@ const ResetPassword: React.FC<ResetPasswordProps> = () => {
         e.preventDefault();
         const success = await sendPasswordResetEmail(email);
         if (success) {
-            alert('Sent email');
+            toast.success('Password reset email sent! Check your inbox.', { position: "top-center", autoClose: 3000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "dark",
+            });
         }
     };
-    useEffect(() => {
-        if (error) alert(error.message);
-    }, [error]);
+    // useEffect(() => {
+    //     if (error) alert(error.message);
+    // }, [error]);// firebase doent send 404 insted for security reason it send 200 for all email entered
     return (
         <form className='space-y-6 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8 '
             onSubmit={handleReset}>

@@ -3,6 +3,7 @@ import { auth } from '@/firebase/firebase';
 import { useRouter } from 'next/router';
 import React, { use, useEffect, useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import { useSetRecoilState } from 'recoil';
 type LoginProps = {
 
@@ -29,11 +30,11 @@ const Login: React.FC<LoginProps> = () => {
             if(!newUser) return;
             router.push('/') //if newuser will thrw to home page
         } catch (error:any) {
-            alert(error.message);
+           toast.error(error.message,{position: "top-center", autoClose: 3000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "dark",});
         }
     };
    useEffect(() => {
-    if(error) alert(error.message);
+    if(error) toast.error(error.message,{position: "top-center", autoClose: 3000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "dark",});
    },[error]);
     return (
         <form className='space-y-6 px-6 pb-4' onSubmit={handleLogin}>
