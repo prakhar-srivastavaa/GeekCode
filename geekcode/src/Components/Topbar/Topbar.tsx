@@ -6,29 +6,51 @@ import Logout from '../Buttons/Logout';
 import { useSetRecoilState } from 'recoil';
 import { authModalState } from '@/atoms/authModalAtom';
 import Image from 'next/image';
+import { problems } from '../../mockProblems/problems';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { BsList } from 'react-icons/bs';
 
 type TopbarProps = {
-    
+    problemPage?: boolean;
 };
 
-const Topbar:React.FC<TopbarProps> = () => {
+const Topbar:React.FC<TopbarProps> = ({problemPage}) => {
     const [user] = useAuthState(auth);
     const setAuthModalState = useSetRecoilState(authModalState);
     
     return <div>
         <nav className='relative flex h-[50px] w-full shrink-0 items-center px-5 bg-dark-layer-1 text-dark-gray-7'>
             <div className='flex w-full items-center justify-between max-w-[1200px] mx-auto'>
-                <Link href="/" className='flex items-center justify-center h-20'>
-                    <img src="/logo-full.png" alt="Logo" className="h-10" />
-                </Link>
+                <div className='w-[180px]'>
+                    <Link href="/" className='flex items-center justify-center h-20'>
+                        <img src="/logo-full.png" alt="Logo" className="h-10" />
+                    </Link>
+                </div>
 
-                <div className='flex items-center space-x-4 flex-1 justify-end'>
+                {problemPage && (
+                    <div className='flex items-center gap-4 justify-center flex-1'>
+                        <div className='flex items-center justify-center rounded dark-fill-3 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer'>
+                            <FaChevronLeft />
+                        </div>
+                        <Link href="/" className='flex items-center justify-center gap-2 font-medium max-w-[170px] text-dark-gray-8 cursor-pointer hover:underline'>
+                            <div>
+                                <BsList />
+                            </div>
+                            <p>ProblemList</p>
+                        </Link>
+                        <div className='flex items-center justify-center rounded dark-fill-3 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer'>
+                            <FaChevronRight />
+                        </div>
+                    </div>  
+                )}
+
+                <div className='flex items-center space-x-4 justify-end w-[180px]'>
                     <div>
                         <a
                             href="https://github.com/prakhar-srivastavaa"
                             target='_blank'
                             rel="noreferrer"
-                            className='bg-dark-fill-3 py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2'
+                            className='bg-dark-fill-3 py-1 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2'
                         >
                             Premium
                         </a>
@@ -42,7 +64,7 @@ const Topbar:React.FC<TopbarProps> = () => {
                         )}
                         {user &&(
                             <div className='cursor-pointer group relative'>
-                                <Image src ="/avatar.png" alt="user profile img" height={30} width={30}/>
+                                <Image src="/avatar.png" alt="user profile img" height={500} width={500} className="max-w-8 h-8 rounded-full"/>
                                 <div className='absolute top-10 left-2/4 -translate-x-2/4 mx-auto bg-dark-layer-1 text-brand-orange py-1 px-2 rounded shadow-lg 
                                 z-40 group-hover:scale-100 scale-0
                                 transition-all duration-300 ease-in-out'>

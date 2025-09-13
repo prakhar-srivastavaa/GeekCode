@@ -1,5 +1,4 @@
 import Navbar from '@/Components/Navbar/Navbar';
-import Coding from '@/Components/Coding/Coding';
 
 import React, { useEffect, useState } from 'react';
 import AuthModal from '@/Components/Modals/AuthModal';
