@@ -23,3 +23,23 @@
   --color-dark-green-s: rgb(44 187 93);
   --color-dark-blue-s: rgb(10 132 255);
 }
+
+
+.split {
+    display: flex;
+    flex-direction: row;
+}
+
+.gutter {
+    background-color: rgb(26,26,26);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.gutter:hover {
+    background-color: #0a84ff;
+}
+
+.gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+    cursor: col-resize;
+}
