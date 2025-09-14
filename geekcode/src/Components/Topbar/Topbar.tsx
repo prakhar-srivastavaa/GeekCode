@@ -9,6 +9,7 @@ import Image from 'next/image';
 import { problems } from '../../mockProblems/problems';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { BsList } from 'react-icons/bs';
+import Timer from '../Timer/Timer';
 
 type TopbarProps = {
     problemPage?: boolean;
@@ -62,6 +63,7 @@ const Topbar:React.FC<TopbarProps> = ({problemPage}) => {
                                 </button>
                             </Link>
                         )}
+                        {problemPage && <Timer/>}
                         {user &&(
                             <div className='cursor-pointer group relative'>
                                 <Image src="/avatar.png" alt="user profile img" height={500} width={500} className="max-w-7 rounded-full"/>
