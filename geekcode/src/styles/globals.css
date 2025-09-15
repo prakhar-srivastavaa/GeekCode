@@ -23,12 +23,15 @@
   --color-dark-green-s: rgb(44 187 93);
   --color-dark-blue-s: rgb(10 132 255);
 }
-/* 
+
 @layer components{
   .preferenceBtn{
-    @apply relative rounded px-3 py-1.5 font-medium items-center transition-all focus:outline-none inline-flex ml-auto p-1 mr-2 hover:bg-dark-fill-3 group;
+    @apply relative rounded px-3 py-1.5 font-medium items-center transition-all focus:outline-none inline-flex ml-auto p-1 mr-2 hover:bg-dark-fill-3;
   }
-} */
+  .preferenceBtn-tooltip{
+    @apply absolute w-auto p-2 text-sm m-2 min-w-max translate-x-3 right-0 top-5 z-10 rounded-md shadow-md text-dark-layer-2 bg-gray-200 origin-center scale-0 transition-all duration-100 ease-linear group-hover:scale-100;
+  }
+}
 
 
 .split {
@@ -43,6 +46,19 @@
 }
 .gutter:hover {
     background-color: #0a84ff;
+}
+/* CODE EDITOR*/
+.cm-scroller,
+.cm-gutters {
+	background-color: #282828 !important;
+}
+.cm-focused {
+	outline: none !important;
+}
+
+.gutter.gutter-vertical {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+    cursor: row-resize;
 }
 
 .gutter.gutter-horizontal {
