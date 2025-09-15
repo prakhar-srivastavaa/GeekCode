@@ -43,10 +43,35 @@
     background-color: rgb(26,26,26);
     background-repeat: no-repeat;
     background-position: 50%;
+    position: relative;
 }
+
 .gutter:hover {
-    background-color: #0a84ff;
+    background-color: rgb(26,26,26); /* Keep original background */
 }
+
+.gutter.gutter-horizontal:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #0a84ff;
+    transform: translateX(-50%);
+}
+
+.gutter.gutter-vertical:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    background-color: #0a84ff;
+    transform: translateY(-50%);
+}
+
 /* CODE EDITOR*/
 .cm-scroller,
 .cm-gutters {
