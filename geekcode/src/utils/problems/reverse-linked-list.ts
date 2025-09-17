@@ -23,7 +23,8 @@ class LinkedList {
 		}
 		return prev!;
 	}
-// main check of code goes here
+}
+// main check of code goes here}
 export const reverseLinkedListHandler = (fn: any) => {
 	try {
 		const tests = [[1, 2, 3, 4, 5], [5, 4, 3, 2, 1], [1, 2, 3], [1]];

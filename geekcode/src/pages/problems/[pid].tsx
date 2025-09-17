@@ -14,3 +14,6 @@ const ProblemPage:React.FC<ProblemPageProps> = () => {
     </div>
 }
 export default ProblemPage;
+
+//fetch the loacal data
+//ssg:static site generation
