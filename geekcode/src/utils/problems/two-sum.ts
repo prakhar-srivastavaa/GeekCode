@@ -1,52 +1,39 @@
 import assert from "assert";
-import handler from '../../pages/api/hello';
-import { NextRequest } from "next/server";
+import { Problem } from "../types/problem";
 
-export type Example = {
-    id: number;
-    inputText: string;
-    outputText: string;
-    explanation?: string;
-    img?: string;
-};
 
-export type Problem = {
-    id: number;
-    title: string;
-    problemStatement: string;
-    examples: Example[];
-    constraints: string[];
-    order: number;
-    starterCode: string;
-    handlerFunction: ((fn: any) => boolean) | string;
-    starterFunctionName: string;
-};
 
-const StarterCodeTwoSum  = `function twoSum(nums, target) {
+
+const StarterCodeTwoSum = `function twoSum(nums, target) {
     // Write your code here
 };`;
-const handlerTwoSum = (fn: any) => {
+
+//checkig if user have correct output
+const handlerTwoSum = (fn: any) => {// fn is callback that users code is passed into
     try {
         const nums = [
             [2, 7, 11, 15],
             [3, 2, 4],
             [3, 3],
         ];
+
         const targets = [9, 6, 6];
         const answers = [ //expected outputs
             [0, 1],
             [1, 2],
             [0, 1],
         ];
+
+        //looping all test cases to test output of users
         for (let i = 0; i < nums.length; i++) {
             // result frm user code  
             const result = fn(nums[i], targets[i]);
             assert.deepStrictEqual(result, answers[i]);
         }
         return true;
-        
 
-    } catch(error:any){
+
+    } catch (error: any) {
         console.log("Two Sum handler error", error);
         throw new Error(error);
     }
@@ -55,13 +42,13 @@ const handlerTwoSum = (fn: any) => {
 export const twoSum: Problem = {
     id: "two-sum",
     title: "1. Two Sum",
-    problemStatement: `<p className='mt-3'>
+    problemStatement: `<p class='mt-3'>
                                 Given an array of integers <code>nums</code> and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to</em> <code>target</code>.
                             </p>
-                            <p className='mt-3'>
+                            <p class='mt-3'>
                                 You may assume that each input would have <strong>exactly one solution</strong>, and you may not use the same element twice.
                             </p>
-                            <p className='mt-3'>
+                            <p class='mt-3'>
                                 You can return the answer in any order.
                             </p>`,
     examples: [
@@ -84,16 +71,16 @@ export const twoSum: Problem = {
             explanation: `Because nums[0] + nums[1] == 6, we return [0, 1].`
         },
     ],
-    constraints: `<li className='mt-2'>
+    constraints: `<li class='mt-2'>
                                     <code>2 = nums.length = 10</code>
                                 </li>
-                                <li className='mt-2'>
+                                <li class='mt-2'>
                                     <code>-10 = nums[i] = 10</code>
                                 </li>
-                                <li className='mt-2'>
+                                <li class='mt-2'>
                                     <code>-10 = target = 10</code>
                                 </li>
-                                <li className='mt-2'>
+                                <li class='mt-2'>
                                     <strong>Only one valid answer exists.</strong>
                                 </li>`,
     handlerFunction: handlerTwoSum,
