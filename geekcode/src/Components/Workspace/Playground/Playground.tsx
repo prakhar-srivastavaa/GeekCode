@@ -17,7 +17,7 @@ const Playground: React.FC<PlaygroundProps> = () => {
 
     const boilerPlate = `function twoSum(nums, target) {
     // Write your code here :)
-};`
+};`;
 
     return (
         <div className='flex flex-col bg-dark-layer-1 relative overflow-x-hidden'>

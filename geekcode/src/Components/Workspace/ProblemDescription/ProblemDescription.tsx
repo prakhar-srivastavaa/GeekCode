@@ -43,7 +43,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = () => {
                                 <TiStarOutline />
                             </div>
                         </div>
-
+                        {/* problem statment description */}
                         <div className='text-white text-sm'>
                             <p className='mt-3'>
                                 Given an array of integers <code>nums</code> and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to</em> <code>target</code>.
