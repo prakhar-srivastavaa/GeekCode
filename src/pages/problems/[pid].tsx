@@ -1,15 +1,17 @@
 import Topbar from '@/Components/Topbar/Topbar';
 import Workspace from '@/Components/Workspace/Workspace';
 import { problems } from '@/utils/problems';
+import { Problem } from '@/utils/types/problem';
 import { GetStaticProps } from 'next';
 import React from 'react';
 
 type ProblemPageProps = {
-    problem: any;
+    problem: Problem;
     
 };
 
-const ProblemPage:React.FC<ProblemPageProps> = () => {
+const ProblemPage:React.FC<ProblemPageProps> = ({problem}) => {
+    console.log(problem);
     
     return <div>
         <Topbar problemPage={true}/>
