@@ -49,7 +49,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
 
     return {
-        notFound: true,// if not a problem 
+        notFound: true,
     };
 };
 
