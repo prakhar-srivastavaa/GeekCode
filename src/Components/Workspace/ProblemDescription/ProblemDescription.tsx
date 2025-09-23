@@ -2,6 +2,7 @@ import React from 'react';
 import { AiFillDislike, AiFillLike } from 'react-icons/ai';
 import { BsCheck2Circle } from 'react-icons/bs';
 import { TiStarOutline } from 'react-icons/ti';
+import { Problem } from '../../../mockProblems/problems';
 
 type ProblemDescriptionProps = {
 
@@ -57,30 +58,9 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = () => {
                         </div>
                         {/* examples */}
                         <div className='mt-4'>
-                            {/* example1 */}
-                            <div>
-                                <p className='font-medium text-white'>Example 1:</p>
-                                <div className='example-card'>
-                                    <pre>
-                                        <strong className='text-white'>Input: </strong> nums = [2,7,11,15], target = 9{" "}
-                                        <br />
-                                        <strong>Output:</strong>[0,1]<br />
-                                        <strong>Explanation:</strong>Because nums[0] + nums[1] == 9, we return [0, 1].
-                                    </pre>
-                                </div>
-                            </div>
-                            {/* example2 */}
-                            <div>
-                                <p className='font-medium text-white'>Example 2:</p>
-                                <div className='example-card'>
-                                    <pre>
-                                        <strong className='text-white'>Input: </strong> nums = [3,2,4], target = 6{" "}
-                                        <br />
-                                        <strong>Output:</strong>[1,2]<br />
-                                        <strong>Explanation:</strong>Because nums[1] + nums[2] == 6, we return [1, 2].
-                                    </pre>
-                                </div>
-                            </div>
+                            {}
+                            {problem.examples.map((example, index) => ()}
+
                         </div>
                         {/* constraints */}
                         <div className='my-5'>
