@@ -58,9 +58,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = () => {
                         </div>
                         {/* examples */}
                         <div className='mt-4'>
-                            {}
-                            {problem.examples.map((example, index) => ()}
-
+                            {Problem}
                         </div>
                         {/* constraints */}
                         <div className='my-5'>
