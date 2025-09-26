@@ -11,17 +11,6 @@ interface ProblemMap {
     [key: string]: Problem;
 }
 
-// export type Problem = {
-//     id: number;
-//     title: string;
-//     problemStatement: string;
-//     examples: Example[];
-//     constraints: string[];
-//     order: number;
-//     starterCode: string;
-//     handlerFunction: ((fn: any) => boolean) | string;
-//     starterFunctionName: string;
-// };
 export const problems: ProblemMap = {
     "two-sum": twoSum,
     "reverse-linked-list": reverseLinkedList,

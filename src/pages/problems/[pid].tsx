@@ -15,7 +15,7 @@ const ProblemPage:React.FC<ProblemPageProps> = ({problem}) => {
     
     return <div>
         <Topbar problemPage={true}/>
-        <Workspace problem={problem}/>
+        <Workspace />
     </div>
 }
 export default ProblemPage;
@@ -27,29 +27,28 @@ export async function getStaticPaths() {
     const paths = Object.keys(problems).map((key) => ({
         params: { pid: key },
     }));
-    return { paths, fallback: false };
+    return { paths, fallback: false };//404
 }
 
 //get static props => it fetches the data for each route
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-    const { pid } = params as { pid: string };
+export async function getStaticProps({ params }: { params: { pid: string } }) {
+    const { pid } = params;
 
     // Get the problem data
     const problem = problems[pid];
 
     // Remove the handlerFunction before returning
-    if (problem) {
-        const { handlerFunction, ...problemWithoutHandler } = problem;
-
+    if (!problem) {
+        return {
+            notFound: true,// if not a problem 
+        }
+    }
+    problem.handlerFunction = problem.handlerFunction.toString();
         return {
             props: {
-                problem: problemWithoutHandler,
+                problem,
             },
         };
     }
 
-    return {
-        notFound: true,// if not a problem 
-    };
-};
 
