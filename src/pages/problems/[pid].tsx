@@ -15,7 +15,7 @@ const ProblemPage:React.FC<ProblemPageProps> = ({problem}) => {
     
     return <div>
         <Topbar problemPage={true}/>
-        <Workspace />
+        <Workspace problem={problem}/>
     </div>
 }
 export default ProblemPage;

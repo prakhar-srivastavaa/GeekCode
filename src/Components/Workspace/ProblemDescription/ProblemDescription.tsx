@@ -1,14 +1,15 @@
+import { Problem } from '@/utils/types/problem';
 import React from 'react';
 import { AiFillDislike, AiFillLike } from 'react-icons/ai';
 import { BsCheck2Circle } from 'react-icons/bs';
 import { TiStarOutline } from 'react-icons/ti';
-import { Problem } from '../../../mockProblems/problems';
 
 type ProblemDescriptionProps = {
+    problem: Problem
 
 };
 
-const ProblemDescription: React.FC<ProblemDescriptionProps> = () => {
+const ProblemDescription: React.FC<ProblemDescriptionProps> = ({problem}) => {
 
     return (
         <div className='bg-dark-layer-1'>
@@ -22,7 +23,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = () => {
                     <div className='w-full'>
                         <div className='flex space-x-4'>
                             <div className='flex-1 mr-2 text-lg text-white font-medium'>
-                                1. Two Sum
+                                {problem?.title}
                             </div>
                         </div>
                         <div className='flex items-center mt-3'>
@@ -46,19 +47,11 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = () => {
                         </div>
                         {/* problem statment description */}
                         <div className='text-white text-sm'>
-                            <p className='mt-3'>
-                                Given an array of integers <code>nums</code> and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to</em> <code>target</code>.
-                            </p>
-                            <p className='mt-3'>
-                                You may assume that each input would have <strong>exactly one solution</strong>, and you may not use the same element twice.
-                            </p>
-                            <p className='mt-3'>
-                                You can return the answer in any order.
-                            </p>
+                            <div dangerouslySetInnerHTML={{ __html: problem.problemStatement }}/>
                         </div>
                         {/* examples */}
                         <div className='mt-4'>
-                            {Problem}
+                        
                         </div>
                         {/* constraints */}
                         <div className='my-5'>
