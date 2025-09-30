@@ -45,6 +45,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({problem}) => {
                                 <TiStarOutline />
                             </div>
                         </div>
+                        
                         {/* problem statment description */}
                         <div className='text-white text-sm'>
                             <div dangerouslySetInnerHTML={{ __html: problem.problemStatement }}/>
