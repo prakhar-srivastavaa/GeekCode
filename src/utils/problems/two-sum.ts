@@ -88,3 +88,4 @@ export const twoSum: Problem = {
     order: 1,
     starterFunctionName: "function twoSum(",
 };
+
