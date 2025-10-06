@@ -6,8 +6,7 @@ import { GetStaticProps } from 'next';
 import React from 'react';
 
 type ProblemPageProps = {
-    problem: Problem;
-    
+    problem: Problem;  
 };
 
 const ProblemPage:React.FC<ProblemPageProps> = ({problem}) => {
