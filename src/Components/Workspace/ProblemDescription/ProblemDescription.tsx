@@ -1,4 +1,4 @@
-import { Problem } from '@/utils/types/problem';
+import { Problem } from '../../../utils/types/problem';
 import React from 'react';
 import { AiFillDislike, AiFillLike } from 'react-icons/ai';
 import { BsCheck2Circle } from 'react-icons/bs';
@@ -51,7 +51,30 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({problem}) => {
                         </div>
                         {/* examples */}
                         <div className='mt-4'>
-                        
+                            {problem.examples.map((example, index) => (
+                                <div key={example.id}>
+                                    <p className='font-medium text-white'>Example {index + 1}:</p>
+                                    {example.img && (
+                                        <img src={example.img} alt="" className='mt-3' />
+                                    )}
+                                    <div className='example-card'>
+                                        <pre>
+                                            <strong className='text-white'>Input: </strong>
+                                            {example.inputText}
+                                            <br />
+                                            <strong>Output: </strong>
+                                            {example.outputText}
+                                            <br />
+                                            {example.explanation && (
+                                                <>
+                                                    <strong>Explanation: </strong>
+                                                    {example.explanation}
+                                                </>
+                                            )}
+                                        </pre>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                         {/* constraints */}
                         <div className='my-5'>
@@ -59,18 +82,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({problem}) => {
                                 Constraints:
                             </div>
                             <ul className='text-white ml-5 list-disc'>
-                                <li className='mt-2'>
-                                    <code>2 = nums.length = 10</code>
-                                </li>
-                                <li className='mt-2'>
-                                    <code>-10 = nums[i] = 10</code>
-                                </li>
-                                <li className='mt-2'>
-                                    <code>-10 = target = 10</code>
-                                </li>
-                                <li className='mt-2'>
-                                    <strong>Only one valid answer exists.</strong>
-                                </li>
+                                <div dangerouslySetInnerHTML={{ __html: problem.constraints }} />
                             </ul>
                         </div>
                     </div>

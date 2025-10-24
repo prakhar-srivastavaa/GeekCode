@@ -1,7 +1,7 @@
 import Topbar from '@/Components/Topbar/Topbar';
 import Workspace from '@/Components/Workspace/Workspace';
 import { problems } from '@/utils/problems';
-import { Problem } from '@/utils/types/problem';
+import { Problem } from '../../utils/types/problem';
 import { GetStaticProps } from 'next';
 import React from 'react';
 
@@ -22,9 +22,10 @@ export default ProblemPage;
 //fetch the loacal data
 //ssg:static site generation
 //get staticpaths => it creates the dynamic routes
+
 export async function getStaticPaths() {
     const paths = Object.keys(problems).map((key) => ({
-        params: { pid: key },
+        params: { pid: key }
     }));
     return { paths, fallback: false };//404
 }

@@ -49,7 +49,7 @@ function useCloseModal() {
         }   
         window.addEventListener("keydown", handelEsc);
         return () => window.removeEventListener("keydown", handelEsc);
-    }, []);
+    }, [closeModal]);
     
     return closeModal; 
 }
