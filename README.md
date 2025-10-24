@@ -378,3 +378,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Refactor authentication flow - 2025-10-24T19:47:12 -->
 
+<!-- Update: Add input validation for problem submission - 2025-10-24T21:15:33 -->
+
