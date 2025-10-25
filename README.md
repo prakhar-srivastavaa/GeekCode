@@ -382,3 +382,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Improve UI responsiveness for mobile devices - 2025-10-25T09:34:21 -->
 
+<!-- Update: Optimize Firebase query performance - 2025-10-25T20:12:48 -->
+
