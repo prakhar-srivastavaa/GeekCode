@@ -380,3 +380,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Add input validation for problem submission - 2025-10-24T21:15:33 -->
 
+<!-- Update: Improve UI responsiveness for mobile devices - 2025-10-25T09:34:21 -->
+
