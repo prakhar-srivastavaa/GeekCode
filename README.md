@@ -390,3 +390,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Fix modal closing behavior on escape key - 2025-10-26T19:28:54 -->
 
+<!-- Update: Enhance code editor syntax highlighting - 2025-10-26T22:03:11 -->
+
