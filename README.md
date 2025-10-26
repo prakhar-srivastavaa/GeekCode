@@ -384,3 +384,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Optimize Firebase query performance - 2025-10-25T20:12:48 -->
 
+<!-- Update: Add dark mode theme improvements - 2025-10-26T08:15:37 -->
+
