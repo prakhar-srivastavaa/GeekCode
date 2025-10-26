@@ -388,3 +388,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Update timer component functionality - 2025-10-26T10:42:19 -->
 
+<!-- Update: Fix modal closing behavior on escape key - 2025-10-26T19:28:54 -->
+
