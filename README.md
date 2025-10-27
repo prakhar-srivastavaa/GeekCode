@@ -398,3 +398,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Update problem difficulty indicators - 2025-10-27T14:33:09 -->
 
+<!-- Update: Add submission history feature - 2025-10-27T18:56:31 -->
+
