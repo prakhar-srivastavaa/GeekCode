@@ -396,3 +396,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Implement user progress tracking - 2025-10-27T11:18:45 -->
 
+<!-- Update: Update problem difficulty indicators - 2025-10-27T14:33:09 -->
+
