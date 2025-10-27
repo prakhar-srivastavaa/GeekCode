@@ -400,3 +400,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Add submission history feature - 2025-10-27T18:56:31 -->
 
+<!-- Update: Improve error handling in authentication - 2025-10-27T21:42:17 -->
+
