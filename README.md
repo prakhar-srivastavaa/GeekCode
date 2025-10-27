@@ -392,3 +392,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Enhance code editor syntax highlighting - 2025-10-26T22:03:11 -->
 
+<!-- Update: Add new problem: Binary Search Tree validation - 2025-10-27T07:45:22 -->
+
