@@ -394,3 +394,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Add new problem: Binary Search Tree validation - 2025-10-27T07:45:22 -->
 
+<!-- Update: Implement user progress tracking - 2025-10-27T11:18:45 -->
+
