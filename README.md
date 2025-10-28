@@ -406,3 +406,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Add loading states for async operations - 2025-10-28T19:21:52 -->
 
+<!-- Update: Update navbar styling and layout - 2025-10-28T22:38:14 -->
+
