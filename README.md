@@ -404,3 +404,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Optimize bundle size for production build - 2025-10-28T17:54:28 -->
 
+<!-- Update: Add loading states for async operations - 2025-10-28T19:21:52 -->
+
