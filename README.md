@@ -410,3 +410,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Fix memory leak in timer component - 2025-10-29T08:47:33 -->
 
+<!-- Update: Add test cases for utility functions - 2025-10-29T10:19:46 -->
+
