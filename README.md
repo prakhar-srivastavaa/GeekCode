@@ -416,3 +416,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Add user profile settings page - 2025-10-30T13:45:37 -->
 
+<!-- Update: Update Firebase security rules - 2025-10-30T19:12:44 -->
+
