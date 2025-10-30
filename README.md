@@ -414,3 +414,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Implement problem search functionality - 2025-10-30T09:23:18 -->
 
+<!-- Update: Add user profile settings page - 2025-10-30T13:45:37 -->
+
