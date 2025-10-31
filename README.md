@@ -420,3 +420,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Improve code editor auto-completion - 2025-10-30T21:56:09 -->
 
+<!-- Update: Add problem tags and filtering - 2025-10-31T18:34:52 -->
+
