@@ -422,3 +422,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Add problem tags and filtering - 2025-10-31T18:34:52 -->
 
+<!-- Update: Implement streak tracking feature - 2025-10-31T20:11:28 -->
+
