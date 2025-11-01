@@ -430,3 +430,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Implement code submission validation - 2025-11-01T11:52:19 -->
 
+<!-- Update: Update problem description formatting - 2025-11-01T15:17:33 -->
+
