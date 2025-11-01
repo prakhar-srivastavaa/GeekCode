@@ -426,3 +426,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Update workspace layout for better UX - 2025-10-31T22:47:15 -->
 
+<!-- Update: Add new problem: Longest Common Subsequence - 2025-11-01T07:28:41 -->
+
