@@ -432,3 +432,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Update problem description formatting - 2025-11-01T15:17:33 -->
 
+<!-- Update: Add keyboard shortcuts for editor - 2025-11-01T19:43:27 -->
+
