@@ -438,3 +438,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Fix TypeScript type definitions - 2025-11-02T08:56:14 -->
 
+<!-- Update: Add social sharing functionality - 2025-11-02T11:33:48 -->
+
