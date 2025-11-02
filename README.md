@@ -436,3 +436,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Improve responsive design for tablets - 2025-11-01T22:19:55 -->
 
+<!-- Update: Fix TypeScript type definitions - 2025-11-02T08:56:14 -->
+
