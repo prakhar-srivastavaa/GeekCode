@@ -444,3 +444,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Add problem hints system - 2025-11-03T12:18:56 -->
 
+<!-- Update: Update authentication error messages - 2025-11-03T17:52:31 -->
+
