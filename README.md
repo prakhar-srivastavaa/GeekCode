@@ -442,3 +442,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Implement real-time code collaboration - 2025-11-03T09:41:23 -->
 
+<!-- Update: Add problem hints system - 2025-11-03T12:18:56 -->
+
