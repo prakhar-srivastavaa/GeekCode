@@ -446,3 +446,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Update authentication error messages - 2025-11-03T17:52:31 -->
 
+<!-- Update: Optimize image loading performance - 2025-11-03T21:27:44 -->
+
