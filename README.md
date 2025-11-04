@@ -448,3 +448,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Optimize image loading performance - 2025-11-03T21:27:44 -->
 
+<!-- Update: Add user statistics dashboard - 2025-11-04T18:15:39 -->
+
