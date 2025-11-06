@@ -460,3 +460,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Update theme colors and branding - 2025-11-06T19:21:14 -->
 
+<!-- Update: Add email verification flow - 2025-11-06T22:08:36 -->
+
