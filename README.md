@@ -454,3 +454,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Update footer with links and info - 2025-11-04T22:31:57 -->
 
+<!-- Update: Add new problem: Merge Intervals - 2025-11-06T08:33:27 -->
+
