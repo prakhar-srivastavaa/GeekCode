@@ -456,3 +456,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Add new problem: Merge Intervals - 2025-11-06T08:33:27 -->
 
+<!-- Update: Implement code formatting feature - 2025-11-06T12:47:51 -->
+
