@@ -458,3 +458,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Implement code formatting feature - 2025-11-06T12:47:51 -->
 
+<!-- Update: Update theme colors and branding - 2025-11-06T19:21:14 -->
+
