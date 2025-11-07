@@ -462,3 +462,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Add email verification flow - 2025-11-06T22:08:36 -->
 
+<!-- Update: Fix edge cases in problem validators - 2025-11-07T19:34:19 -->
+
