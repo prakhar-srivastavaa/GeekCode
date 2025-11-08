@@ -472,3 +472,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Add problem difficulty recommendations - 2025-11-08T14:41:29 -->
 
+<!-- Update: Update SEO meta tags - 2025-11-08T18:17:55 -->
+
