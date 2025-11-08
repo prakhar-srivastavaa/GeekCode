@@ -470,3 +470,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Implement leaderboard feature - 2025-11-08T10:26:14 -->
 
+<!-- Update: Add problem difficulty recommendations - 2025-11-08T14:41:29 -->
+
