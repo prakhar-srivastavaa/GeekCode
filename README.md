@@ -474,3 +474,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Update SEO meta tags - 2025-11-08T18:17:55 -->
 
+<!-- Update: Improve accessibility features - 2025-11-08T21:43:22 -->
+
