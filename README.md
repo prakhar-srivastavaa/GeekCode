@@ -476,3 +476,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Update: Improve accessibility features - 2025-11-08T21:43:22 -->
 
+<!-- Update: Add multi-language support structure - 2025-11-09T09:18:47 -->
+
