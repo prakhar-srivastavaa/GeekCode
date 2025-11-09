@@ -6,12 +6,12 @@
 
 **A modern, interactive coding platform for practicing DSA problems with real-time code execution**
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](YOUR_VERCEL_LINK_HERE)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://geek-code-alpha.vercel.app/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-15.5.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![Firebase](https://img.shields.io/badge/Firebase-12.2.1-orange?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
 
-[Live Demo](YOUR_VERCEL_LINK_HERE) • [Report Bug](https://github.com/prakhar-srivastavaa/GeekCode/issues) • [Request Feature](https://github.com/prakhar-srivastavaa/GeekCode/issues)
+[Live Demo](https://geek-code-alpha.vercel.app/) • [Report Bug](https://github.com/prakhar-srivastavaa/GeekCode/issues) • [Request Feature](https://github.com/prakhar-srivastavaa/GeekCode/issues)
 
 </div>
 
