@@ -1,16 +1,18 @@
 import { auth } from '@/firebase/firebase';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import Logout from '../Buttons/Logout';
 import { useSetRecoilState } from 'recoil';
 import { authModalState } from '@/atoms/authModalAtom';
 import Image from 'next/image';
 import { problems } from '../../mockProblems/problems';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaCoffee } from 'react-icons/fa';
 import { BsList } from 'react-icons/bs';
 import Timer from '../Timer/Timer';
 import { useRouter } from 'next/router';
+import BuyCoffeeModal from '../Modals/BuyCoffeeModal';
+import ProfileModal from '../Modals/ProfileModal';
 
 type TopbarProps = {
     problemPage?: boolean;
@@ -20,6 +22,22 @@ const Topbar:React.FC<TopbarProps> = ({problemPage}) => {
     const [user] = useAuthState(auth);
     const setAuthModalState = useSetRecoilState(authModalState);
     const router = useRouter();
+    const [isCoffeeModalOpen, setIsCoffeeModalOpen] = useState(false);
+    const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+    const [profilePicture, setProfilePicture] = useState('/avatar.png');
+
+    // Load profile picture from localStorage
+    useEffect(() => {
+        if (user) {
+            const savedProfile = localStorage.getItem(`profile_${user.uid}`);
+            if (savedProfile) {
+                const profile = JSON.parse(savedProfile);
+                if (profile.profilePicture) {
+                    setProfilePicture(profile.profilePicture);
+                }
+            }
+        }
+    }, [user, isProfileModalOpen]);
 
     const handleProblemChange = (isForward: boolean) => {
         const { order } = problems.find((problem) => problem.id === router.query.pid)!;
@@ -64,17 +82,14 @@ const Topbar:React.FC<TopbarProps> = ({problemPage}) => {
                     </div>  
                 )}
 
-                <div className='flex items-center space-x-4 justify-end w-[180px]'>
-                    <div>
-                        <a
-                            href="https://github.com/prakhar-srivastavaa"
-                            target='_blank'
-                            rel="noreferrer"
-                            className='bg-dark-fill-3 py-1 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2'
-                        >
-                            Premium
-                        </a>
-                    </div>
+                <div className='flex items-center space-x-3 justify-end'>
+                    <button
+                        onClick={() => setIsCoffeeModalOpen(true)}
+                        className='bg-dark-fill-3 py-1.5 px-3 cursor-pointer rounded text-green-400 hover:bg-dark-fill-2 flex items-center gap-1.5 transition-colors text-sm whitespace-nowrap'
+                    >
+                        <FaCoffee className='text-sm' />
+                        <span className='hidden sm:inline'>Buy Coffee</span>
+                    </button>
                         {!user &&(
                             <Link href="/auth" onClick={()=> setAuthModalState((prev) => ({...prev, isOpen: true,type: "login"}))}>
                                 <button className="btn btn-sm btn-ghost bg-green-800 hover:bg-green-700 text-white transition duration-300 ease-in-out">
@@ -84,12 +99,20 @@ const Topbar:React.FC<TopbarProps> = ({problemPage}) => {
                         )}
                         {problemPage && <Timer/>}
                         {user &&(
-                            <div className='cursor-pointer group relative'>
-                                <Image src="/avatar.png" alt="user profile img" height={500} width={500} className="max-w-7 rounded-full"/>
-                                <div className='absolute top-10 left-2/4 -translate-x-2/4 mx-auto bg-dark-layer-1 text-brand-orange py-1 px-2 rounded shadow-lg 
+                            <div 
+                                className='cursor-pointer group relative'
+                                onClick={() => setIsProfileModalOpen(true)}
+                            >
+                                <img 
+                                    src={profilePicture} 
+                                    alt="user profile img" 
+                                    className="w-7 h-7 rounded-full object-cover border-2 border-green-500 hover:border-green-400 transition-colors"
+                                />
+                                <div className='absolute top-10 left-2/4 -translate-x-2/4 mx-auto bg-dark-layer-1 text-green-400 py-1 px-2 rounded shadow-lg 
                                 z-40 group-hover:scale-100 scale-0
-                                transition-all duration-300 ease-in-out'>
-                                    <p className='text-sm'>{user.email}</p>
+                                transition-all duration-300 ease-in-out whitespace-nowrap'>
+                                    <p className='text-sm'>Edit Profile</p>
+                                    <p className='text-xs text-gray-400'>{user.email}</p>
                                 </div>
                             </div>
                         )}
@@ -98,6 +121,18 @@ const Topbar:React.FC<TopbarProps> = ({problemPage}) => {
                 </div>
             </div>
         </nav>
+
+        {/* Buy Coffee Modal */}
+        <BuyCoffeeModal 
+            isOpen={isCoffeeModalOpen} 
+            onClose={() => setIsCoffeeModalOpen(false)} 
+        />
+
+        {/* Profile Modal */}
+        <ProfileModal 
+            isOpen={isProfileModalOpen} 
+            onClose={() => setIsProfileModalOpen(false)} 
+        />
     </div>
 }
 export default Topbar;
