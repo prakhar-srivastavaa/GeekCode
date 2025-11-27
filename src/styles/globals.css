@@ -24,6 +24,50 @@
   --color-dark-blue-s: rgb(10 132 255);
 }
 
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(44, 187, 93, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(44, 187, 93, 0.5);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.4s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
 @layer components{
   .preferenceBtn{
     @apply relative rounded px-3 py-1.5 font-medium items-center transition-all focus:outline-none inline-flex ml-auto p-1 mr-2 hover:bg-dark-fill-3;
@@ -31,6 +75,31 @@
   .preferenceBtn-tooltip{
     @apply absolute w-auto p-2 text-sm m-2 min-w-max translate-x-3 right-0 top-5 z-10 rounded-md shadow-md text-dark-layer-2 bg-gray-200 origin-center scale-0 transition-all duration-100 ease-linear group-hover:scale-100;
   }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(26, 26, 26);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(60, 60, 60);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(80, 80, 80);
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(44, 187, 93, 0.3);
+  color: white;
 }
 
 
