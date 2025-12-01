@@ -6,372 +6,131 @@
 
 **A modern, interactive coding platform for practicing DSA problems with real-time code execution**
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://geek-code-alpha.vercel.app/)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+## **[🌐 LIVE DEMO](https://geek-code-alpha.vercel.app/)** 🎯
+
 [![Next.js](https://img.shields.io/badge/Next.js-15.5.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![Firebase](https://img.shields.io/badge/Firebase-12.2.1-orange?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-[Live Demo](https://geek-code-alpha.vercel.app/) • [Report Bug](https://github.com/prakhar-srivastavaa/GeekCode/issues) • [Request Feature](https://github.com/prakhar-srivastavaa/GeekCode/issues)
+[Report Bug](https://github.com/prakhar-srivastavaa/GeekCode/issues) • [Request Feature](https://github.com/prakhar-srivastavaa/GeekCode/issues)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## 🎯 About
 
-- [About The Project](#about-the-project)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Environment Variables](#environment-variables)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Available Problems](#available-problems)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+**GeekCode** is a full-stack coding platform inspired by LeetCode. Practice Data Structures and Algorithms with:
 
----
-
-## 🎯 About The Project
-
-**GeekCode** is a full-stack coding platform inspired by LeetCode, built with modern web technologies. It provides an interactive environment for developers to practice Data Structures and Algorithms (DSA) problems with features like:
-
-- Real-time code editor with syntax highlighting
-- Test case validation
-- Timer functionality
-- User authentication
-- Problem navigation
-- Responsive design
-
-Perfect for interview preparation and improving problem-solving skills!
+- 🖥️ Real-time code editor with syntax highlighting
+- ✅ Test case validation
+- ⏱️ Timer functionality
+- 🔐 User authentication
+- 🧩 Multiple DSA problems
+- 📱 Responsive design
 
 ---
 
 ## ✨ Features
 
-### 🔐 Authentication
-- **Firebase Authentication** - Secure user login/signup
-- **Email/Password** authentication
-- **Password Reset** functionality
-- Persistent user sessions
-
-### 💻 Code Editor
-- **CodeMirror Integration** - Professional code editor
-- **Syntax Highlighting** - JavaScript support
-- **VS Code Dark Theme** - Familiar dark theme
-- **Split View** - Problem description and code editor side-by-side
-
-### 🧪 Problem Solving
-- **Multiple DSA Problems** - Array, LinkedList, Stack, Binary Search, DP
-- **Test Cases** - Multiple test cases per problem
-- **Real-time Validation** - Instant feedback on code execution
-- **Navigation** - Previous/Next buttons to browse problems
-- **Problem List** - Overview of all available problems
-
-### ⏱️ Additional Features
-- **Timer** - Track time spent on each problem
-- **Difficulty Levels** - Easy, Medium, Hard problems
-- **Video Solutions** - YouTube video links for select problems
-- **Responsive Design** - Works on desktop, tablet, and mobile
-- **Loading Skeletons** - Smooth loading experience
+- 🔐 **Firebase Authentication** - Secure login/signup with password reset
+- 💻 **CodeMirror Editor** - Professional code editor with VS Code theme
+- ✅ **Test Validation** - Real-time feedback on code execution
+- 🧩 **DSA Problems** - Array, LinkedList, Stack, Binary Search, DP
+- ⏱️ **Timer** - Track solving time
+- 🎥 **Video Solutions** - YouTube tutorials for select problems
+- 📱 **Responsive** - Works on all devices
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **[Next.js 15.5.2](https://nextjs.org/)** - React framework with SSR/SSG
-- **[React 18.2](https://react.dev/)** - UI library
-- **[TypeScript](https://www.typescriptlang.org/)** - Type safety
-- **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS
-- **[DaisyUI](https://daisyui.com/)** - Component library
-
-### Code Editor
-- **[@uiw/react-codemirror](https://uiwjs.github.io/react-codemirror/)** - Code editor component
-- **[@codemirror/lang-javascript](https://codemirror.net/)** - JavaScript language support
-- **[@uiw/codemirror-theme-vscode](https://uiwjs.github.io/react-codemirror/)** - VS Code theme
-
-### Backend & Database
-- **[Firebase 12.2.1](https://firebase.google.com/)** - Authentication & Database
-- **[Firestore](https://firebase.google.com/products/firestore)** - NoSQL database
-
-### State Management & Utilities
-- **[Recoil](https://recoiljs.org/)** - State management
-- **[React Split](https://split.js.org/)** - Split pane component
-- **[React Icons](https://react-icons.github.io/react-icons/)** - Icon library
-- **[React Toastify](https://fkhadra.github.io/react-toastify/)** - Toast notifications
-- **[React YouTube](https://www.npmjs.com/package/react-youtube)** - YouTube player
+**Frontend:** Next.js 15.5 • React 18 • TypeScript • Tailwind CSS • DaisyUI  
+**Editor:** CodeMirror • VS Code Theme • JavaScript Support  
+**Backend:** Firebase Authentication • Firestore Database  
+**State:** Recoil • React Hooks  
+**UI:** React Split • React Icons • React Toastify • React YouTube
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
+```bash
+# Clone the repo
+git clone https://github.com/prakhar-srivastavaa/GeekCode.git
+cd GeekCode
 
-Make sure you have the following installed:
-- **Node.js** (v18 or higher)
-- **npm** or **yarn**
-- **Git**
+# Install dependencies
+npm install
 
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/prakhar-srivastavaa/GeekCode.git
-   cd GeekCode
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. **Set up environment variables**
-   
-   Create a `.env.local` file in the `src` directory:
-   ```bash
-   cd src
-   touch .env.local
-   ```
-
-4. **Add Firebase configuration**
-   
-   See [Environment Variables](#environment-variables) section below
-
-5. **Run the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-6. **Open your browser**
-   
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
----
-
-## 🔐 Environment Variables
-
-Create a `src/.env.local` file with your Firebase credentials:
-
-```env
-NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key_here
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+# Create src/.env.local with Firebase credentials
+NEXT_PUBLIC_FIREBASE_API_KEY=your_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_bucket
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+
+# Run dev server
+npm run dev
 ```
 
-### How to get Firebase credentials:
-
-1. Go to [Firebase Console](https://console.firebase.google.com/)
-2. Create a new project or select existing one
-3. Go to Project Settings → General
-4. Scroll down to "Your apps" section
-5. Click on Web app (</>) icon
-6. Copy the configuration values
-
----
-
-## 📖 Usage
-
-### For Users
-
-1. **Sign Up / Login**
-   - Create an account or login with existing credentials
-   - Use the "Sign In" button in the navbar
-
-2. **Browse Problems**
-   - View all problems on the homepage
-   - Problems are categorized by difficulty and topic
-
-3. **Solve Problems**
-   - Click on any problem to open the editor
-   - Read the problem description and examples
-   - Write your solution in the code editor
-   - Test your code with provided test cases
-   - Navigate between problems using arrow buttons
-
-4. **Track Progress**
-   - Use the built-in timer to track solving time
-   - Check marks indicate completed problems
-
-### For Developers
-
-```bash
-# Development
-npm run dev          # Start dev server
-
-# Production
-npm run build        # Build for production
-npm start           # Start production server
-
-# Linting
-npm run lint        # Run ESLint
-```
-
----
-
-## 📁 Project Structure
-
-```
-GeekCode/
-├── public/              # Static assets
-│   ├── logo-full.png
-│   └── avatar.png
-├── src/
-│   ├── atoms/           # Recoil state atoms
-│   ├── Components/      # React components
-│   │   ├── Buttons/
-│   │   ├── Modals/
-│   │   ├── Navbar/
-│   │   ├── ProblemsTable/
-│   │   ├── Skeletons/
-│   │   ├── Timer/
-│   │   ├── Topbar/
-│   │   └── Workspace/
-│   ├── context/         # React context
-│   ├── firebase/        # Firebase configuration
-│   ├── hooks/           # Custom React hooks
-│   ├── mockProblems/    # Problem data
-│   ├── pages/           # Next.js pages
-│   │   ├── api/
-│   │   ├── auth/
-│   │   ├── problems/
-│   │   ├── _app.tsx
-│   │   ├── _document.tsx
-│   │   └── index.tsx
-│   ├── styles/          # Global styles
-│   ├── utils/           # Utility functions
-│   │   ├── problems/    # Problem implementations
-│   │   └── types/       # TypeScript types
-│   └── .env.local       # Environment variables
-├── .eslintrc.json
-├── next.config.ts
-├── package.json
-├── tailwind.config.ts
-├── tsconfig.json
-└── README.md
-```
+Get Firebase credentials from [Firebase Console](https://console.firebase.google.com/) → Project Settings → Web App
 
 ---
 
 ## 🧩 Available Problems
 
-| # | Problem | Difficulty | Category | Video |
-|---|---------|-----------|----------|-------|
-| 1 | Two Sum | Easy | Array | ✅ |
-| 2 | Reverse Linked List | Hard | Linked List | ❌ |
-| 3 | Jump Game | Medium | Dynamic Programming | ❌ |
-| 4 | Valid Parentheses | Easy | Stack | ✅ |
-| 5 | Search a 2D Matrix | Medium | Binary Search | ✅ |
-
-**More problems coming soon!**
+| Problem | Difficulty | Category |
+|---------|-----------|----------|
+| Two Sum | Easy | Array |
+| Reverse Linked List | Hard | Linked List |
+| Jump Game | Medium | Dynamic Programming |
+| Valid Parentheses | Easy | Stack |
+| Search a 2D Matrix | Medium | Binary Search |
 
 ---
 
 ## 🌐 Deployment
 
-### Deploy on Vercel (Recommended)
-
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/prakhar-srivastavaa/GeekCode)
 
-1. **Push your code to GitHub**
-   ```bash
-   git add .
-   git commit -m "Ready for deployment"
-   git push origin main
-   ```
-
-2. **Import to Vercel**
-   - Go to [Vercel Dashboard](https://vercel.com/dashboard)
-   - Click "Add New" → "Project"
-   - Import your GitHub repository
-   - Configure environment variables in Vercel settings
-   - Click "Deploy"
-
-3. **Add Environment Variables**
-   - In Vercel project settings, go to "Environment Variables"
-   - Add all variables from `.env.local`
-   - Redeploy if needed
-
-4. **Update README**
-   - Replace `YOUR_VERCEL_LINK_HERE` with your live URL
-
-### Other Deployment Options
-
-- **Netlify**: [Deploy to Netlify](https://www.netlify.com/)
-- **Railway**: [Deploy to Railway](https://railway.app/)
-- **AWS**: Use AWS Amplify or EC2
-- **Docker**: Build and deploy using Docker containers
+1. Push to GitHub
+2. Import to [Vercel](https://vercel.com/dashboard)
+3. Add Firebase environment variables
+4. Deploy!
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are what make the open-source community amazing! Any contributions you make are **greatly appreciated**.
+Contributions are welcome! Fork the repo, make changes, and submit a PR.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Ideas for Contributions
-
-- Add more DSA problems
-- Implement more programming languages (Python, Java, C++)
-- Add submission history
-- Implement discussion forums
-- Add code playground
-- Improve UI/UX
-- Add dark/light theme toggle
-- Implement leaderboard
+**Ideas:** More problems • Multi-language support • Discussion forums • Leaderboard • Theme toggle
 
 ---
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+MIT License - See `LICENSE` for details.
 
 ---
 
 ## 👨‍💻 Contact
 
-**Prakhar Srivastava**
-
-- GitHub: [@prakhar-srivastavaa](https://github.com/prakhar-srivastavaa)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
-- Email: your.email@example.com
-
-**Project Link**: [https://github.com/prakhar-srivastavaa/GeekCode](https://github.com/prakhar-srivastavaa/GeekCode)
-
----
-
-## 🙏 Acknowledgments
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Firebase Documentation](https://firebase.google.com/docs)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [CodeMirror](https://codemirror.net/)
-- [React Icons](https://react-icons.github.io/react-icons/)
-- [LeetCode](https://leetcode.com/) - Inspiration for the project
+**Prakhar Srivastava**  
+GitHub: [@prakhar-srivastavaa](https://github.com/prakhar-srivastavaa) • [GeekCode Repo](https://github.com/prakhar-srivastavaa/GeekCode)
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by [Prakhar Srivastava](https://github.com/prakhar-srivastavaa)**
+**Made with ❤️ by Prakhar Srivastava**
 
-⭐ Star this repo if you find it helpful!
+⭐ **Star this repo if you find it helpful!**
+
+Inspired by [LeetCode](https://leetcode.com/)
 
 </div>
 <!-- Update: Update problem solving algorithm efficiency - 2025-10-24T18:23:45 -->
