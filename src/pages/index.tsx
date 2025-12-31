@@ -32,7 +32,8 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-xs">Problems</p>
-                  <p className="text-white font-bold text-lg">11+</p>
+                  <p className="text-white font-bold text-sm">11+ Problems</p>
+                  <p className="text-gray-500 text-[10px]">(More Coming Soon)</p>
                 </div>
               </div>
             </div>
